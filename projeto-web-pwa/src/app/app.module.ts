@@ -1,3 +1,4 @@
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -96,7 +97,9 @@ export class MaterialModule {}
     }),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
