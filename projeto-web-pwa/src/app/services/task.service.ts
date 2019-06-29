@@ -16,7 +16,6 @@ export class TaskService {
   }
 
   public getTask(id: number): Observable<any> {
-    // return this.http.post("http://www.mocky.io/v2/5d1561fb0e00006e00a112bf",newTask);
     return from(Promise.resolve({
       completed: true,
       creationDate: "2019-06-28T23:25:22.278Z",

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
         priority: ["1", Validators.required]
       }
     );
-    this.taskForm.controls["_id"].value
   }
 
   ngOnInit() {

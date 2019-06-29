@@ -25,6 +25,8 @@ import { MatSidenavModule, MatTabsModule, MatInputModule, MatDatepickerModule, M
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxLoadingModule,ngxLoadingAnimationTypes } from 'ngx-loading';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   exports: [
@@ -72,7 +74,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule
-]})
+],
+  imports: [ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })]})
 export class MaterialModule {}
 
 @NgModule({
